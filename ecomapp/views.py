@@ -4,5 +4,5 @@ from storeapp.models import Product
 def index(request):
     product=Product.objects.all().filter(is_available=True)
     context={
-        "product":product}
+        "product":product,}
     return render(request, 'index.html',context)

@@ -25,5 +25,6 @@ urlpatterns = [
     path('', include('ecomapp.urls')),
     path('storeapp/', include('storeapp.urls')),
     path('cartapp/', include('cartapp.urls')),
+    path('accountsapp/', include('accountsapp.urls')),
     
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

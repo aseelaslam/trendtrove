@@ -21,11 +21,12 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('master/', admin.site.urls),
     path('', include('ecomapp.urls')),
     path('storeapp/', include('storeapp.urls')),
     path('cartapp/', include('cartapp.urls')),
     path('accountsapp/', include('accountsapp.urls')),
     path('order/', include('order.urls')),
+    path('admin/', include('admin_honeypot.urls',namespace='admin_honeypot')),
     
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
